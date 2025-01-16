@@ -5,8 +5,8 @@ import React from 'react';
 const Navbar: React.FC = () => {
     return (
         <nav className="">
-            <div className="">
-                Logo
+            <div className="w-full  bg-black">
+                Chimgee
             </div>
         </nav>
     );
