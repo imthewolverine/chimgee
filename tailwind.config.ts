@@ -16,6 +16,11 @@ export default {
       fontFamily: {
         poppins: ["Poppins", ...defaultTheme.fontFamily.sans],
       },
+      boxShadow: {
+        'special': '0 4px 45px rgba(0, 0, 0, 0.05)',
+        'question': '20px 20px 114px rgba(0, 0, 0, 0.05)',
+        'reply': '4px 0px 100px rgba(0, 0, 0, 0.05)',
+    }
     },
   },
   plugins: [],
