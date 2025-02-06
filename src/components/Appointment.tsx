@@ -2,9 +2,9 @@ import React from 'react';
 
 const Appointment: React.FC = () => {
     return (
-        <div className="lg:min-h-screen flex flex-col lg:flex-row">
+        <div className="lg:min-h-screen flex flex-col lg:flex-row -mt-20">
       {/* Left Side: Form */}
-      <div className="flex lg:w-2/5 justify-center items-center bg-gray-200 min-h-screen relative z-10">
+      <div className="flex lg:w-2/5 justify-center items-center bg-gray-200 min-h-screen relative z-10 p-2">
         <div className="bg-white shadow-md p-8 md:w-2/3 lg:w-full xl:w-2/3 z-100 lg:-mr-56 xl:-mr-96">
           <h1 className="text-[30px] md:text-[36px] lg:text-[30px] xl:text-[36px] text-[#272343] font-bold mb-6 text-gray-800">Цаг авах</h1>
           <form className="space-y-5">
