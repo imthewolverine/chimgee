@@ -21,13 +21,11 @@ const Product: React.FC<ProductProps> = ({ title, description, image }) => {
             <div className="relative w-full h-[200px]">
                 <Image src={image} alt={title} layout="fill" objectFit="cover" />
             </div>
-            <div className="bg-white mb-[-30px] p-4 w-5/6">
+            <div className="bg-white mb-[-30px] p-4 w-5/6 dark:md:hover:bg-blue-200">
                 <div className="text-black text-[10px]">Chimgee</div>
                 <div className="text-[15px]">{title}</div>
-                <div className="text-gray-500 text-[12px]">
-                    {new Date().toISOString().split('T')[0]}
-                </div>
-                <p className="text-gray-600 text-[12px]">{description}</p>
+
+                <p className="text-gray-600 text-[12px] ">{description}</p>
                 <button className="flex items-center text-[13px]" onClick={handleNavigation}>
                     <span className="">Илүү ихийг</span>
                     <Image src="/arrow.svg" alt="Arrow" width={20} height={20} />
