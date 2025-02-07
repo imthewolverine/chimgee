@@ -5,18 +5,13 @@ import { useState } from 'react';
 export default function ProductInformation(productprop: any) {
   const [activeTab, setActiveTab] = useState('instructions');
   const product = productprop.product || {};
-  console.log("product information", product);
-  
- 
   const tabsContent = product.tabsContent || {};
   console.log(tabsContent);  // Check if the structure is correct
-  
   return (
     <div className="max-w-6xl mx-auto p-6 rounded-lg shadow-sm pb-20">
       <h2 className="text-3xl font-semibold mb-6 text-gray-800 Poppins">
         Бүтээгдэхγγний дэлгэрэнгүй мэдээлэл
       </h2>
-  
       {/* Tabs Navigation */}
       <div className="flex gap-2 mb-6">
         {Object.keys(tabsContent).map((tabKey) => (
@@ -33,7 +28,6 @@ export default function ProductInformation(productprop: any) {
           </button>
         ))}
       </div>
-  
       {/* Active Tab Content */}
       <div className="space-y-4">
         {tabsContent[activeTab]?.items?.map((item: any, index: number) => (
