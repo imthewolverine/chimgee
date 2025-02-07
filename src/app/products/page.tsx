@@ -1,6 +1,8 @@
 import React from 'react';
 import Products from "@/components/SuperComponents/Product";
-import Link from 'next/link'
+import Footer from '@/components/Footer';
+import Navbar from '@/components/Navbar';
+import Search from '@/components/SuperComponents/Search';
 
 const testData = [
     { id: 1, title: "Product 1", description: "Description for Product 1", image: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi95ivGXov-Hv6bav-UUA5Ny2kIxreIpVEmFZAwJpwlYdiifPg7HqoExP0xuOYkW8YH4fC4oHeAzAu9svoxM_BtSjlTKzDyQzrGZuwsT5WhXQspOB2rf825dR-Co2ttl5r2IiF1WtKh7Js/s640/Picture1.png" },
@@ -11,27 +13,26 @@ const testData = [
     { id: 6, title: "Product 6", description: "Description for Product 6", image: "https://urgamal.com/wp-content/uploads/2025/01/%D0%B3%D0%B0%D0%BD%D0%B4%D0%B8%D0%B3%D0%B0%D1%80-1.jpg" },
 ];
 
-const ProductsHome: React.FC = () => {
+const ProductList: React.FC = () => {
     return (
+        <div className='bg-gray-100'>
+            
+            <div><Navbar/></div>
+            <div className='px-5'><Search/></div>
         <div className='bg-gray-100 w-full p-6 sm:px-10 md:px-10 lg:px-40 xl:px-72  '>
-                <div className='sm:text-1xl md:text-5xl text-gray-800 font-bold flex items-center justify-center my-10'>
-                    <Link href="/products"> Манай бүтээгдэхүүн </Link>
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-10 text-blue-500">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" /></svg>
-                </div>
-                    {/* 🔹 Featured Product Card (Top One) */}
-                <div className='mt-4 w-full mb-8 '>
-                    <Products title={testData[0].title} description={testData[0].description} image={testData[0].image} />
-                </div>
-                <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 xl:grid-cols-3 gap-4'>
-                    {testData.slice().map(product => (
-                        <div key={product.id} className='ml-2  mt-20 '>
-                            <Products title={product.title} description={product.description} image={product.image} />
-                        </div>
-                    ))}
-                </div>
+            {/* 🔹 Featured Product Card (Top One) */}
+            <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 xl:grid-cols-3 gap-4'>
+                {testData.slice().map(product => (
+                    <div key={product.id} className='ml-2 mt-20 '>
+                        <Products title={product.title} description={product.description} image={product.image} />
+                    </div>
+                ))}
+            </div>
+            
+        </div>
+        <div><Footer/></div>
         </div>
     );
 };
 
-export default ProductsHome;
+export default ProductList;
