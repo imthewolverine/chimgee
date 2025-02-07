@@ -15,6 +15,8 @@ export default {
       },
       fontFamily: {
         poppins: ["Poppins", ...defaultTheme.fontFamily.sans],
+        Helvetica: ["Helvetica", ...defaultTheme.fontFamily.sans],
+        Roboto: ["Roboto", ...defaultTheme.fontFamily.sans],
       },
       boxShadow: {
         'special': '0 4px 45px rgba(0, 0, 0, 0.05)',
