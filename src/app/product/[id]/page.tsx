@@ -4,12 +4,7 @@ import ProductDescription from "@/components/ProductDesctription";
 import ProductInformation from "@/components/ProductInformation";
 import { notFound } from "next/navigation";
 import React from "react";
-
-async function getProducts() {
-  const res = await fetch(`http://localhost:3000/api/products`, { cache: "no-store" });
-  if (!res.ok) return [];
-  return res.json();
-}
+import { getProducts } from "@/lib/data";
 
 export default async function ProductsPage({ params }: { params: { id: string } }) {
   const products = await getProducts();

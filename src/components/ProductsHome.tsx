@@ -1,13 +1,7 @@
 import React from 'react';
 import Product from "@/components/SuperComponents/Product";
 import Link from 'next/link'
-
-
-async function getProducts() {
-    const res = await fetch(`http://localhost:3000/api/products`, { cache: "no-store" });
-    if (!res.ok) return [];
-    return res.json();
-  }
+import { getProducts } from '@/lib/data';
 const ProductsHome: React.FC = async () => {
     const products = await getProducts();
     console.log("products ", products);

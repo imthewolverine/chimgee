@@ -3,12 +3,7 @@ import Product from "@/components/SuperComponents/Product";
 import Footer from '@/components/Footer';
 import Navbar from '@/components/Navbar';
 import Search from '@/components/SuperComponents/Search';
-
-async function getProducts() {
-    const res = await fetch(`http://localhost:3000/api/products`, { cache: "no-store" });
-    if (!res.ok) return [];
-    return res.json();
-  }
+import { getProducts } from '@/lib/data';
 
 const ProductList: React.FC = async () => {
     const products = await getProducts();
